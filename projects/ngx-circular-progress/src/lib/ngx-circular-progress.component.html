@@ -1,0 +1,7 @@
+<div class="progress-circle" [ngClass]="{'over50': bln}">
+    <span [ngStyle]="{'color': txtColor}">{{percent}}%</span>
+    <div class="left-half-clipper">
+       <div class="first50-bar" [ngStyle]="{'background-color': color}"></div>
+       <div class="value-bar" [ngStyle]="{'transform': degStr, 'border-color': color}"></div>
+    </div>
+</div>

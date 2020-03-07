@@ -1,0 +1,64 @@
+.progress-circle {
+    font-size: 20px;
+    margin: 20px;
+    position: relative;
+    padding: 0;
+    width: 5em;
+    height: 5em;
+    background-color: #f2e9e1;
+    border-radius: 50%;
+    line-height: 5em;
+    display: inline-block;
+}
+.progress-circle:after {
+    border: none;
+    position: absolute;
+    top: 0.35em;
+    left: 0.35em;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    width: 4.3em;
+    height: 4.3em;
+    background-color: #fff;
+    content: " ";
+}
+.progress-circle span {
+    position: absolute;
+    line-height: 5em;
+    width: 5em;
+    text-align: center;
+    display: block;
+    z-index: 2;
+}
+.left-half-clipper {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    clip: rect(0, 5em, 5em, 2.5em);
+}
+.progress-circle.over50 .left-half-clipper {
+    clip: rect(auto, auto, auto, auto);
+}
+.value-bar {
+    position: absolute;
+    clip: rect(0, 2.5em, 5em, 0);
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    border-width: 0.45em;
+    border-style: solid;
+    box-sizing: border-box;
+}
+.progress-circle.over50 .first50-bar {
+    position: absolute;
+    clip: rect(0, 5em, 5em, 2.5em);
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}
+.progress-circle:not(.over50) .first50-bar {
+    display: none;
+}
+  
